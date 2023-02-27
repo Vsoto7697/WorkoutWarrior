@@ -9,7 +9,7 @@ module.exports = {
     })
       .select("-__v")
       .populate("sneakers")
-      .populate("clothes")
+      .populate("clothing")
 
     if (!foundUser) {
       return res.status(400).json({ message: 'Cannot find a user with this id!' });

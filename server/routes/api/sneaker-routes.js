@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const {
-  createClothes,
-  getClothesById,
-  deleteClothes,
-} = require("../../controllers/clothes-controller");
+  createClothing,
+  getClothingById,
+  deleteClothing,
+} = require("../../controllers/clothing-controller");
 
 const {
   createSneaker,
@@ -26,10 +26,10 @@ router.route("/sneaker").post(createSneaker);
 // /api/purchase/sneaker/:id
 router.route("/sneaker/:id").get(getSneakerById).delete(deleteSneaker);
 
-// /api/purchase/clothes
-router.route("/clothes").post(createClothes);
+// /api/purchase/clothing
+router.route("/clothing").post(createClothing);
 
-// /api/purchase/clothes/:id
-router.route("/clothes/:id").get(getClothesById).delete(deleteClothes);
+// /api/purchase/clothing/:id
+router.route("/clothing/:id").get(getClothingById).delete(deleteClothing);
 
 module.exports = router;
